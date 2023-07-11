@@ -9,7 +9,7 @@ CREATE TABLE ESTUDANTE(
 	email_aluno varchar(50) not null,
 	endereco_estudante varchar(100),
 	telefone_estudante varchar(20),
-	cpf_estudante varchar(11) unique not null,
+	cpf_estudante varchar(14) unique not null,
 	status status_enum default 'ativo'
 	
 );
@@ -17,7 +17,7 @@ CREATE TABLE ESTUDANTE(
 CREATE TABLE TURMA(
 	id_turma serial primary key,
 	nome_turma varchar(30) not null,
-	ano_turma date,
+	ano_turma int,
 	quantidade_alunos int
 );
 
@@ -46,7 +46,7 @@ CREATE TABLE FACILITADOR(
 	email_facilitador varchar(100) not null,
 	data_nascimento date,
 	endereco_facilitador varchar(100),
-	cpf_facilitador varchar(11) unique not null
+	cpf_facilitador varchar(14) unique not null
 );
 
 CREATE TABLE LOG_ESTUDANTE (
@@ -65,5 +65,6 @@ CREATE TABLE RESILIA(
 	modulo_id int REFERENCES MODULO(id_modulo),
 	curso_id int REFERENCES CURSO(id_curso),
 	facilitador_id int REFERENCES FACILITADOR(id_facilitador),
-	data_registro date		
+	data_registro date
 );
+
