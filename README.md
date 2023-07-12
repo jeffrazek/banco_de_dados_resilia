@@ -36,7 +36,7 @@ O banco de dados do projeto possui as seguintes tabelas:
 - `LOG_ESTUDANTE`: tabela para registrar o histórico de alterações no status dos estudantes.
 - `RESILIA`: tabela para associar os estudantes, turmas, cursos, módulos e facilitadores.
 
-Para obter mais detalhes sobre a estrutura do banco de dados, consulte o arquivo [CRIATE.SQL](CREATE.SQL).
+Para obter mais detalhes sobre a estrutura do banco de dados, consulte o arquivo [CREATE.SQL](CREATE.SQL).
 
 ## Instalação e Configuração
 
