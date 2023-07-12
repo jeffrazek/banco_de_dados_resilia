@@ -1,5 +1,4 @@
-# banco_de_dados_resilia
-
+# Resilia Data
 
 Este é o repositório do projeto Resilia Data, um sistema de gerenciamento de estudantes, turmas, cursos, módulos e facilitadores. O projeto utiliza um banco de dados PostgreSQL e foi desenvolvido como parte das atividades do curso Resilia Educação.
 
@@ -22,7 +21,9 @@ O Resilia Data é um sistema de gerenciamento de dados para uma instituição de
 - PL/pgSQL: linguagem procedural do PostgreSQL utilizada para criar funções e triggers.
 - Git: sistema de controle de versão utilizado para o gerenciamento do código-fonte.
 - GitHub: plataforma de hospedagem de repositórios Git utilizada para compartilhar o projeto.
-- Lucidchart: Plataforma usada para fazer a modelagem.
+- Lucidchart: ferramenta de modelagem de dados utilizada para criar o diagrama do banco de dados.
+- Discord: aplicativo de comunicação em grupo utilizado para os encontros do grupo de desenvolvimento.
+- WhatsApp: aplicativo de comunicação utilizado para as interações do grupo de desenvolvimento.
 
 ## Estrutura do Banco de Dados
 
@@ -36,7 +37,7 @@ O banco de dados do projeto possui as seguintes tabelas:
 - `LOG_ESTUDANTE`: tabela para registrar o histórico de alterações no status dos estudantes.
 - `RESILIA`: tabela para associar os estudantes, turmas, cursos, módulos e facilitadores.
 
-Para obter mais detalhes sobre a estrutura do banco de dados, consulte o arquivo [CREATE.SQL](CREATE.SQL).
+Para obter mais detalhes sobre a estrutura do banco de dados, consulte o arquivo [database.sql](database.sql).
 
 ## Instalação e Configuração
 
@@ -44,3 +45,18 @@ Para obter mais detalhes sobre a estrutura do banco de dados, consulte o arquivo
 2. Clone o repositório do projeto em sua máquina local.
 3. Importe o arquivo `database.sql` para criar o banco de dados e as tabelas necessárias.
 4. Configure as credenciais de acesso ao banco de dados no arquivo de configuração.
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir uma nova issue para relatar problemas, sugerir melhorias ou enviar pull requests com novas funcionalidades.
+
+## Contato
+
+Para mais informações ou dúvidas sobre o projeto, entre em contato:
+
+- Discord: [seu_usuario_discord](link_do_discord)
+- WhatsApp: [seu_numero_whatsapp](link_do_whatsapp)
+
+## Licença
+
+Este projeto está licenciado sob a licença [MIT](LICENSE).
