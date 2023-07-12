@@ -1,6 +1,6 @@
-# Resilia Data
+# RESILIDATA
 
-Este é o repositório do projeto Resilia Data, um sistema de gerenciamento de estudantes, turmas, cursos, módulos e facilitadores. O projeto utiliza um banco de dados PostgreSQL e foi desenvolvido como parte das atividades do curso Resilia Educação.
+Este é o repositório do projeto RESILIDATA, um sistema de gerenciamento de estudantes, turmas, cursos, módulos e facilitadores. O projeto utiliza um banco de dados PostgreSQL e foi desenvolvido como parte das atividades do curso Resilia Educação.
 
 ## Descrição
 
@@ -37,7 +37,7 @@ O banco de dados do projeto possui as seguintes tabelas:
 - `LOG_ESTUDANTE`: tabela para registrar o histórico de alterações no status dos estudantes.
 - `RESILIA`: tabela para associar os estudantes, turmas, cursos, módulos e facilitadores.
 
-Para obter mais detalhes sobre a estrutura do banco de dados, consulte o arquivo [database.sql](database.sql).
+Para obter mais detalhes sobre a estrutura do banco de dados, consulte o arquivo [CREATE.sql](CREATE.sql).
 
 ## Instalação e Configuração
 
@@ -54,8 +54,10 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir uma nova issue p
 
 Para mais informações ou dúvidas sobre o projeto, entre em contato:
 
-- Discord: [seu_usuario_discord](link_do_discord)
-- WhatsApp: [seu_numero_whatsapp](link_do_whatsapp)
+- [![Discord](https://img.shields.io/badge/Discord-Click%20Here-blue?style=flat&logo=discord)]([link_do_discord](https://discord.com/channels/@julianapvh))
+
+- [![WhatsApp](https://img.shields.io/badge/WhatsApp-Click%20Here-green?style=flat&logo=whatsapp)]([link_do_whatsapp](https://api.whatsapp.com/send?phone=5569993434364))
+
 
 ## Licença
 
