@@ -55,7 +55,7 @@ VALUES
 
 INSERT INTO facilitador ( nome_facilitador, email_facilitador, data_nascimento, endereco_facilitador, cpf_facilitador)
 VALUES
-  ( 'Fernando Oliveira', 'fernando.oliveira@example.com', '1980-05-12', 'Rua A, 123', '123.456.789-01'),
+  ( 'Fernando Oliveira', 'fernando.oliveira@example.com', '1980-05-12', 'Rua A, 123', '223.456.789-99'),
   ( 'Carolina Silva', 'carolina.silva@example.com', '1985-09-20', 'Rua B, 456', '987.654.321-09'),
   ( 'Rodrigo Souza', 'rodrigo.souza@example.com', '1977-03-15', 'Rua C, 789', '456.789.123-45'),
   ( 'Lúcia Santos', 'lucia.santos@example.com', '1982-07-29', 'Rua D, 321', '321.654.987-78'),
@@ -179,3 +179,26 @@ VALUES
     INSERT INTO estudante (nome_estudante, data_nascimento, email_aluno, endereco_estudante, telefone_estudante, cpf_estudante, status)
 VALUES
   ('João Silva', '1995-02-10', 'joao.silva@example.com', 'Rua A, 123', '(11) 987654321', '123.456.789-02', 'ativo');
+
+
+INSERT INTO facilitador ( nome_facilitador, email_facilitador, data_nascimento, endereco_facilitador, cpf_facilitador)
+VALUES
+  ( 'Fernando Oliveira', 'fernando.oliveira@example.com', '1980-05-12', 'Rua A, 123', '070.670.980-01');
+
+
+  INSERT INTO resilia (turma_id, modulo_id, curso_id, facilitador_id, data_registro)
+VALUES
+    ( 8, 10, 2, 33, '2022-09-18');
+
+
+
+    INSERT INTO estudante (nome_estudante, data_nascimento, email_aluno, endereco_estudante, telefone_estudante, cpf_estudante, status)
+VALUES
+  ('João Silva', '1995-02-10', 'joao.silva@example.com', 'Rua A, 123', '(11) 987654321', '123.456.789-99', 'ativo');
+
+
+
+
+
+
+
