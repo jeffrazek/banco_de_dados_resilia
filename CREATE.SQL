@@ -1,3 +1,5 @@
+-- Active: 1689168282605@@127.0.0.1@5432@resilidata
+
 CREATE DATABASE RESILIDATA;
 
 CREATE TYPE status_enum AS ENUM ('ativo', 'inativo');

@@ -22,7 +22,7 @@ JOIN RESILIA r ON t.id_turma = r.turma_id
 JOIN ESTUDANTE e ON r.estudante_id = e.id_estudante
 GROUP BY t.nome_turma;
 
-SELECT * FROM vw_porcentagem_evasao_por_turma;
+SELECT * FROM evasao_por_turma;
 
 
 4--Crie um trigger para ser disparado quando o atributo status de um estudante for atualizado e inserir um novo dado em uma tabela de log.
