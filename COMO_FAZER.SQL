@@ -55,10 +55,12 @@ FOR EACH ROW
 EXECUTE FUNCTION register_log_estud();
 
 -- Questão que deverá ser respondida por scripts SQL que combine pelo menos 3 tabelas.
--- Quantidade de alunos por turma e módulo
+-- Quantidade de alunos por turma e Curso
 
-SELECT T.nome_turma, COUNT(*) AS numero_estudantes
+SELECT T.nome_turma, C.nome_curso, COUNT(*) AS numero_estudantes
 FROM TURMA T
 JOIN RESILIA R ON T.id_turma = R.turma_id
 JOIN ESTUDANTE E ON R.estudante_id = E.id_estudante
-GROUP BY T.nome_turma ORDER BY T.nome_turma ASC;
+JOIN CURSO C ON R.curso_id = C.id_curso
+GROUP BY T.nome_turma, C.nome_curso
+ORDER BY T.nome_turma ASC;
