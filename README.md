@@ -25,6 +25,10 @@ O Resilia Data é um sistema de gerenciamento de dados para uma instituição de
 - Discord: aplicativo de comunicação em grupo utilizado para os encontros do grupo de desenvolvimento.
 - WhatsApp: aplicativo de comunicação utilizado para as interações do grupo de desenvolvimento.
 
+
+![Quadro do Trello](RESILIDATA/Apresentação/trello.jpg)
+
+
 ## Estrutura do Banco de Dados
 
 O banco de dados do projeto possui as seguintes tabelas:
