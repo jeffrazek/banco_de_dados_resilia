@@ -12,7 +12,7 @@ RIGHT JOIN
 	TURMA TRM
 ON RSL.TURMA_ID = TRM.ID_TURMA
 GROUP BY FCL.ID_FACILITADOR
-ORDER BY COUNT(RSL.TURMA_ID) DESC
+ORDER BY COUNT(RSL.TURMA_ID) DESC;
 
 
 -- Quais são os cursos mais populares com base no número de alunos matriculados?
