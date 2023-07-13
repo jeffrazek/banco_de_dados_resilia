@@ -9,7 +9,7 @@ GROUP BY facilitador_id, f.nome_facilitador
 HAVING count(curso_id) > 1 
 ORDER BY facilitador_id;
 
-3--Crie uma view que selecione a porcentagem de estudantes com status de evasão agrupados por turma;
+-- 3. Crie uma view que selecione a porcentagem de estudantes com status de evasão agrupados por turma;
 
 
 CREATE VIEW evasao_por_turma AS
@@ -25,7 +25,7 @@ GROUP BY t.nome_turma;
 SELECT * FROM evasao_por_turma;
 
 
-4--Crie um trigger para ser disparado quando o atributo status de um estudante for atualizado e inserir um novo dado em uma tabela de log.
+--4. Crie um trigger para ser disparado quando o atributo status de um estudante for atualizado e inserir um novo dado em uma tabela de log.
 
 CREATE OR REPLACE FUNCTION register_log_estud()
 RETURNS TRIGGER AS $$
