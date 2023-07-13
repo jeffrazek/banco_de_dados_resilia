@@ -55,7 +55,7 @@ FOR EACH ROW
 EXECUTE FUNCTION register_log_estud();
 
 -- Questão que deverá ser respondida por scripts SQL que combine pelo menos 3 tabelas.
--- Quantidade de alunos por turma 
+-- Quantidade de alunos por turma e módulo
 
 SELECT T.nome_turma, COUNT(*) AS numero_estudantes
 FROM TURMA T
