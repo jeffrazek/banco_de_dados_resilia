@@ -176,30 +176,125 @@ VALUES
     ( 46, 15, 20, 7, 10, '2023-01-28');
 
 
-    INSERT INTO estudante (nome_estudante, data_nascimento, email_aluno, endereco_estudante, telefone_estudante, cpf_estudante, status)
+
+
+
+
+
+
+-- Inserindo outro estudante no banco
+    INSERT INTO estudante (nome_estudante, data_nascimento, email_aluno, endereco_estudante, telefone_estudante, cpf_estudante)
 VALUES
-  ('João Silva', '1995-02-10', 'joao.silva@example.com', 'Rua A, 123', '(11) 987654321', '123.456.789-02', 'ativo');
+  ('João Silva', '1995-02-10', 'joao.silva@example.com', 'Rua A, 123', '(11) 987654321', '123.456.789-02');
+
+-- Consultando dados da tabela estudante
+SELECT * FROM estudante;
 
 
+
+
+
+
+
+
+-- Inserindo outro Facilitador no banco
 INSERT INTO facilitador ( nome_facilitador, email_facilitador, data_nascimento, endereco_facilitador, cpf_facilitador)
 VALUES
   ( 'Fernando Oliveira', 'fernando.oliveira@example.com', '1980-05-12', 'Rua A, 123', '070.670.980-01');
 
+-- Consultando dados da tabela facilitador
+SELECT * FROM facilitador;
 
+
+
+
+
+-- Inserindo outro Registro na tabela fato
   INSERT INTO resilia (turma_id, modulo_id, curso_id, facilitador_id, data_registro)
 VALUES
     ( 8, 10, 2, 15, '2022-09-18');
 
-
-
-    INSERT INTO estudante (nome_estudante, data_nascimento, email_aluno, endereco_estudante, telefone_estudante, cpf_estudante, status)
-VALUES
-  ('João Silva', '1995-02-10', 'joao.silva@example.com', 'Rua A, 123', '(11) 987654321', '123.456.789-99', 'ativo');
+-- Consultando dados da tabela resilia
+SELECT * FROM resilia;
 
 
 
+
+
+
+-- Alterando status do estudante 1 para inativo
+
+UPDATE estudante SET status = 'inativo'
+WHERE id_estudante = 1;
+
+-- Consultando dados da log
+SELECT * FROM log_estudante;
+
+
+
+
+
+-- Alterando status do estudante 2 para inativo
+UPDATE estudante SET status = 'inativo'
+WHERE id_estudante = 2;
+
+-- Consultando dados da log
+SELECT * FROM log_estudante;
+
+
+
+
+
+
+-- Alterando status do estudante com cpf 963.741.852-53 para ativo
 UPDATE estudante SET status = 'ativo'
-WHERE cpf_estudante = '123.456.789-99';
+WHERE cpf_estudante = '963.741.852-53';
+
+-- Consultando dados da log
+SELECT * FROM log_estudante;
 
 
 
+
+
+
+--1. Selecionar a quantidade total de estudantes cadastrados no banco;
+SELECT count(*) as "Quantidade de Estudantes" FROM estudante;
+
+--2. Selecionar quais pessoas facilitadoras atuam em mais de uma turma;
+SELECT facilitador_id as "id", f.nome_facilitador as "Nome", count(curso_id) as "Quantidade de turmas"
+FROM resilia  
+JOIN facilitador f ON facilitador_id = id_facilitador  
+GROUP BY facilitador_id, f.nome_facilitador 
+HAVING count(curso_id) > 1 
+ORDER BY facilitador_id;
+
+
+
+
+-- 3. Crie uma view que selecione a porcentagem de estudantes com status de evasão agrupados por turma;
+
+CREATE VIEW evasao_por_turma AS
+SELECT t.nome_turma, 
+       COUNT(CASE WHEN e.status = 'inativo' THEN 1 END) AS quantidade_evasao,
+       COUNT(*) AS quantidade_total,
+       ROUND((COUNT(CASE WHEN e.status = 'inativo' THEN 1 END) * 100.0) / COUNT(*), 2) AS porcentagem_evasao
+FROM TURMA t
+JOIN RESILIA r ON t.id_turma = r.turma_id
+JOIN ESTUDANTE e ON r.estudante_id = e.id_estudante
+GROUP BY t.nome_turma;
+
+SELECT * FROM evasao_por_turma;
+
+
+
+-- Questão que deverá ser respondida por scripts SQL que combine pelo menos 3 tabelas.
+-- Quantidade de alunos por turma e Curso
+
+SELECT T.nome_turma, C.nome_curso, COUNT(*) AS numero_estudantes
+FROM TURMA T
+JOIN RESILIA R ON T.id_turma = R.turma_id
+JOIN ESTUDANTE E ON R.estudante_id = E.id_estudante
+JOIN CURSO C ON R.curso_id = C.id_curso
+GROUP BY T.nome_turma, C.nome_curso
+ORDER BY T.nome_turma ASC;
