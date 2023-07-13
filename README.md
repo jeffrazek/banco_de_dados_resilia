@@ -24,7 +24,7 @@ O Resilia Data é um sistema de gerenciamento de dados para uma instituição de
 - Lucidchart: ferramenta de modelagem de dados utilizada para criar o diagrama do banco de dados.
 - Discord: aplicativo de comunicação em grupo utilizado para os encontros do grupo de desenvolvimento.
 - WhatsApp: aplicativo de comunicação utilizado para as interações do grupo de desenvolvimento.
-
+- Trello: plataforma de gerenciamento de projetos utilizada para acompanhar o progresso, organizar tarefas e facilitar a colaboração da equipe.
 
 ![Quadro do Trello](Apresentação/trello.jpg)
 
