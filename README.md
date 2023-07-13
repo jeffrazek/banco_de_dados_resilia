@@ -39,6 +39,17 @@ O banco de dados do projeto possui as seguintes tabelas:
 
 Para obter mais detalhes sobre a estrutura do banco de dados, consulte o arquivo [CREATE.sql](CREATE.sql).
 
+
+## Perguntas Extras
+
+A partir do banco de dados, é possível extrair resultados importantes para análise. Algumas perguntas extras que podem ser respondidas são:
+
+- **Quais são os facilitadores que estão em mais de uma turma?**
+- **Quais são os cursos mais populares com base no número de alunos matriculados?**
+- **Quais são os alunos que estão matriculados em mais de uma turma?**
+  
+
+
 ## Instalação e Configuração
 
 1. Certifique-se de ter o PostgreSQL instalado e configurado em seu ambiente.
